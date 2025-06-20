@@ -2,6 +2,18 @@
 Interest Rate
 #############
 
+The `RateHelper` subclasses provides a set of classes that can be used to boostrap a term structure. 
+
+Key Methods
+-----------
+
+- ``quote()``: Returns the market quote associated with the helper.
+- ``impliedQuote()``: Returns the implied quote from the current term structure.
+- ``quoteError()``: Returns the difference between the market quote and the implied quote.
+- ``setTermStructure(TS*)``: Sets the term structure to be used for pricing. **Warning:** The term structure pointer must remain valid for the lifetime of the helper.
+- ``earliestDate()``, ``maturityDate()``, ``latestRelevantDate()``, ``pillarDate()``, ``latestDate()``: Various date accessors relevant to the bootstrapping process.
+
+
 DepositRateHelper
 *****************
 
